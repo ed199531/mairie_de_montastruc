@@ -5,21 +5,21 @@
    ================================================================= */
 
 :root {
-  /* Bleus */
-  --navy-900: #0d3b54;
-  --navy-800: #10485f;
-  --navy-700: #14618e;
-  --brand: #14618e;
-  --brand-600: #1a6f9f;
-  --brand-500: #2b83b0;
-  --sky-100: #e7f1f7;
-  --sky-50: #f2f8fb;
-  /* Accent brique / terracotta */
-  --brick-700: #9c3b25;
-  --brick: #b4472c;
-  --brick-500: #c05a3e;
-  --terra-200: #f4e2d8;
-  --terra-100: #faf0ea;
+  /* Bleus — alignés sur le logo officiel (bleu royal Montastruc) */
+  --navy-900: #123a6e;
+  --navy-800: #164080;
+  --navy-700: #1a5299;
+  --brand: #1a5aa8;
+  --brand-600: #1f66bd;
+  --brand-500: #2f80c9;
+  --sky-100: #e6eef9;
+  --sky-50: #f1f6fc;
+  /* Accent orange-rouge (soulignement du logo) */
+  --brick-700: #b23a15;
+  --brick: #d64a1f;
+  --brick-500: #e35d2a;
+  --terra-200: #f7ddcf;
+  --terra-100: #fcefe7;
   /* Neutres */
   --ink: #16242c;
   --slate: #4a5a63;
@@ -108,11 +108,11 @@ ul, ol { margin: 0 0 1rem; padding-left: 1.25rem; }
 .site-header { background: rgba(255, 255, 255, .92); backdrop-filter: saturate(1.4) blur(8px); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--line); transition: box-shadow .2s; }
 .site-header.is-stuck { box-shadow: var(--shadow); }
 .header-inner { display: flex; align-items: center; gap: 1.5rem; min-height: 74px; }
-.brand { display: flex; align-items: center; gap: .7rem; text-decoration: none; margin-right: auto; }
-.brand-mark { flex: none; }
-.brand-text { display: flex; flex-direction: column; line-height: 1.1; }
-.brand-name { font-family: var(--font-head); font-weight: 600; font-size: 1.16rem; color: var(--navy-900); }
-.brand-sub { font-size: .74rem; letter-spacing: .08em; text-transform: uppercase; color: var(--slate); font-weight: 600; }
+.brand { display: flex; align-items: center; text-decoration: none; margin-right: auto; }
+.brand-logo { height: 56px; width: auto; display: block; }
+@media (max-width: 480px) { .brand-logo { height: 44px; } }
+.foot-logo-chip { display: inline-block; background: #fff; padding: .55rem .8rem; border-radius: 12px; }
+.foot-logo-chip img { height: 42px; width: auto; display: block; }
 
 .main-nav { display: flex; align-items: center; gap: 1.4rem; }
 .nav-list { display: flex; align-items: center; gap: .2rem; list-style: none; margin: 0; padding: 0; }
@@ -157,8 +157,10 @@ ul, ol { margin: 0 0 1rem; padding-left: 1.25rem; }
 .breadcrumb [aria-current="page"] span { color: var(--navy-900); font-weight: 600; }
 
 /* --------------------------------------------------------------- hero */
-.hero { position: relative; background: linear-gradient(135deg, var(--navy-900), var(--navy-700) 60%, var(--brand-600)); color: #fff; overflow: hidden; }
-.hero::after { content: ""; position: absolute; inset: 0; background: url("/assets/img/pattern.svg") right center / cover no-repeat; opacity: .16; pointer-events: none; }
+.hero { position: relative; background: var(--navy-900); color: #fff; overflow: hidden; }
+.hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+.hero::after { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(105deg, rgba(18, 58, 110, .94) 0%, rgba(18, 58, 110, .86) 42%, rgba(26, 82, 153, .68) 100%); pointer-events: none; }
+.hero .hero-inner { z-index: 2; }
 .hero-inner { position: relative; display: grid; grid-template-columns: 1.15fr .85fr; gap: 2.5rem; align-items: center; padding: clamp(2.5rem, 6vw, 5rem) 0; }
 .hero-text h1 { color: #fff; margin-bottom: 1rem; }
 .hero-text p.lead { font-size: 1.15rem; color: #dce8f0; max-width: 46ch; margin-bottom: 1.8rem; }

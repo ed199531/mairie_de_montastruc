@@ -28,7 +28,21 @@
       "Bash(curl -sI https://mairie-de-montastruc.vercel.app/fr/index.html)",
       "Bash(curl -s -o /dev/null -w \"sitemap: HTTP %{http_code}\\\\n\" https://mairie-de-montastruc.vercel.app/sitemap.xml)",
       "Bash(curl -s -o /dev/null -w \"robots: HTTP %{http_code}\\\\n\" https://mairie-de-montastruc.vercel.app/robots.txt)",
-      "Bash(git -c 'user.name=Mairie Montastruc' -c user.email=edwin@localisia.fr commit -q -m 'Fix: redirections 301 anciennes URLs /fr \\(compat cleanUrls\\) + CSP frame-src *)"
+      "Bash(git -c 'user.name=Mairie Montastruc' -c user.email=edwin@localisia.fr commit -q -m 'Fix: redirections 301 anciennes URLs /fr \\(compat cleanUrls\\) + CSP frame-src *)",
+      "Read(//private/tmp/**)",
+      "Bash(curl -sL \"http://mairie-montastruc.fr/fr/index.html\" -o mm_home.html)",
+      "Bash(cd /tmp && echo \"=== LOGO / header ===\" && grep -oiE '\\(logo|blason|header\\)[^>]*' mm_home.html | grep -oiE 'src=\"[^\"]+\"|href=\"[^\"]+\\\\.\\(png|jpg|svg|jpeg\\)\"' | sort -u | head && echo \"\" && echo \"--- toute occurrence 'logo' ---\" && grep -oiE 'src=\"[^\"]*logo[^\"]*\"' mm_home.html | sort -u && echo \"\" && echo \"=== LIENS externes clés \\(rdv, portail, facebook...\\) ===\" && grep -oiE 'href=\"[^\"]*\\(rdv360|portail|facebook|instagram|youtube|passeport|salle|demarches\\)[^\"]*\"' mm_home.html | sort -u | head -30)",
+      "Bash(python3 -)",
+      "mcp__claude-in-chrome__tabs_context_mcp",
+      "Bash(curl -sL \"http://mairie-montastruc.fr/fr/moi-ma-ville-ma-communaute/institution-citoyennete/le-conseil-municipal.html\" -o mm_conseil.html)",
+      "Bash(mv -f \"mairie_montastruc.jpg\" \"logo-montastruc.jpg\")",
+      "Bash(mv -f \"31_-_Montastruc-la-Conseillère_-_La_mairie_-_Façade.jpg\" \"mairie-facade.jpg\")",
+      "Bash(mv -f \"images.jpeg\" \"montastruc-aerien.jpg\")",
+      "Bash(mv -f \"ext-maire.jpg\" \"maire-jb-capel.jpg\")",
+      "Bash(mv -f \"ext-favicon.png\" \"favicon.png\")",
+      "Bash(rm -f public/assets/img/actu-orgue.svg public/assets/img/og-default.svg)",
+      "Bash(grep -rnoE '/assets/img/\\(blason|village|pattern|favicon\\\\.svg|og-default|actu-orgue\\)[^\"]*' src build.js public/assets/css)",
+      "Bash(git -c 'user.name=Mairie Montastruc' -c user.email=edwin@localisia.fr commit -q -m 'Fidélité au site existant : vrai logo, vraies photos, vrais liens & contenus *)"
     ]
   }
 }

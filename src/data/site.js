@@ -30,8 +30,26 @@ const config = {
     lat: 43.6923,
     lng: 1.6033,
     mayor: "Jean-Baptiste Capel",
+    mayorSince: "2020",
     population: "3 708",
     insee: "31384",
+    siret: "21310358300018",
+    elus: "27",
+    adjoints: "7",
+  },
+  // Services externes officiels de la commune
+  links: {
+    rdv360: "https://www.rdv360.com/mairie-montastruc-la-conseillere-31380-montastruc-la-conseillere",
+    portailFamille: "https://portail.berger-levrault.fr/mairieMontastruc31380/accueil",
+    ants: "https://ants.gouv.fr",
+    servicePublic: "https://www.service-public.fr",
+  },
+  // Hébergeur réel (le site n'est pas hébergé sur Vercel en production)
+  host: {
+    name: "OXYD S.A.R.L",
+    rcs: "RCS Paris 433 768 975",
+    address: "19 rue Alphonse de Neuville, 75017 Paris",
+    phone: "01 71 250 350",
   },
   hours: [
     { day: "Lundi", d: "Monday", am: "08:30 – 12:00", pm: "14:00 – 18:00", o: ["08:30-12:00", "14:00-18:00"] },
@@ -43,9 +61,9 @@ const config = {
     { day: "Dimanche", d: "Sunday", am: "Fermé", pm: "Fermé", o: [] },
   ],
   social: {
-    facebook: "https://www.facebook.com/mairiemontastruc",
-    instagram: "https://www.instagram.com/mairiemontastruc",
-    youtube: "https://www.youtube.com/@mairiemontastruc",
+    facebook: "https://www.facebook.com/MontastruclaConseillere/",
+    instagram: "https://www.instagram.com/montastruclaconseillere/",
+    youtube: "https://www.youtube.com/channel/UCZChfJQp5IMIJkviJXN-h8A/featured",
   },
 };
 
@@ -251,7 +269,7 @@ const news = [
     title: "Restauration de l'orgue de l'église Saint-Barthélemy : appel aux dons",
     date: "2026-06-24",
     category: "Culture & patrimoine",
-    image: "/assets/img/actu-orgue.svg",
+    image: "/assets/img/eglise-saint-barthelemy.jpg",
     excerpt:
       "La commune lance une souscription pour restaurer l'orgue historique de la manufacture Théodore Puget (1872), joyau de l'église Saint-Barthélemy.",
     body: `

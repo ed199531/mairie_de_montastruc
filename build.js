@@ -77,11 +77,7 @@ function header(page) {
   <header class="site-header" id="siteHeader">
     <div class="container header-inner">
       <a class="brand" href="/" aria-label="Accueil — Mairie de Montastruc-la-Conseillère">
-        <img src="/assets/img/blason.svg" width="46" height="52" alt="" class="brand-mark" aria-hidden="true">
-        <span class="brand-text">
-          <span class="brand-name">Montastruc-la-Conseillère</span>
-          <span class="brand-sub">Mairie · Haute-Garonne</span>
-        </span>
+        <img src="/assets/img/logo-montastruc.jpg" width="196" height="60" alt="Montastruc-la-Conseillère" class="brand-logo">
       </a>
       <nav class="main-nav" id="mainNav" aria-label="Navigation principale">
         <ul class="nav-list">
@@ -129,8 +125,7 @@ function footer() {
     <div class="container footer-grid">
       <div class="foot-brand">
         <div class="foot-brand-head">
-          <img src="/assets/img/blason.svg" width="42" height="48" alt="" aria-hidden="true">
-          <div><strong>Mairie de Montastruc-la-Conseillère</strong><span>Site officiel de la commune</span></div>
+          <span class="foot-logo-chip"><img src="/assets/img/logo-montastruc.jpg" width="150" height="46" alt="Montastruc-la-Conseillère"></span>
         </div>
         <address>
           ${esc(n.street)}, ${esc(n.postBox)}<br>${esc(n.postalCode)} ${esc(n.city)}<br>
@@ -201,7 +196,7 @@ function localGovSchema() {
     url: BASE + "/",
     telephone: n.phoneE164,
     email: n.email,
-    image: BASE + "/assets/img/og-default.svg",
+    image: BASE + "/assets/img/mairie-facade.jpg",
     areaServed: { "@type": "City", name: n.city },
     address: {
       "@type": "PostalAddress",
@@ -307,7 +302,7 @@ function render({ title, description, canonical, ogType, ogImage, bodyClass, hea
     .replace(/{{CANONICAL}}/g, canonical)
     .replace(/{{ROBOTS}}/g, noindex ? '<meta name="robots" content="noindex, follow">' : '<meta name="robots" content="index, follow, max-image-preview:large">')
     .replace(/{{OG_TYPE}}/g, ogType || "website")
-    .replace(/{{OG_IMAGE}}/g, ogImage || BASE + "/assets/img/og-default.svg")
+    .replace(/{{OG_IMAGE}}/g, ogImage || BASE + "/assets/img/mairie-facade.jpg")
     .replace(/{{BODY_CLASS}}/g, bodyClass || "")
     .replace("{{HEADER}}", h)
     .replace("{{BREADCRUMB}}", b)
@@ -493,7 +488,7 @@ function buildManifest() {
         background_color: "#f5f7f8",
         theme_color: "#0d3b54",
         lang: "fr-FR",
-        icons: [{ src: "/assets/img/favicon.svg", sizes: "any", type: "image/svg+xml" }],
+        icons: [{ src: "/assets/img/favicon.png", sizes: "30x32", type: "image/png" }],
       },
       null,
       2

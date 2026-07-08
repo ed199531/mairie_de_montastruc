@@ -9,9 +9,9 @@
   "lang": "fr-FR",
   "icons": [
     {
-      "src": "/assets/img/favicon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml"
+      "src": "/assets/img/favicon.png",
+      "sizes": "30x32",
+      "type": "image/png"
     }
   ]
 }
