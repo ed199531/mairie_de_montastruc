@@ -14,12 +14,17 @@
       toggle.setAttribute("aria-label", open ? "Fermer le menu" : "Ouvrir le menu");
       document.body.style.overflow = open ? "hidden" : "";
     });
-    // fermer au clic sur un lien
+    // fermer au clic sur un lien de navigation réel
+    // (on NE ferme PAS quand on clique un parent à sous-menu : il ne fait que dérouler)
     $$(".main-nav a", nav).forEach(function (a) {
       a.addEventListener("click", function () {
-        if (nav.classList.contains("open") && a.getAttribute("href").indexOf("#") !== 0) {
+        var isMobile = window.matchMedia("(max-width: 1000px)").matches;
+        var isParent = a.classList.contains("nav-link") && a.parentNode.classList.contains("has-sub");
+        if (isMobile && isParent) return; // laisse le sous-menu se dérouler
+        if (nav.classList.contains("open")) {
           nav.classList.remove("open");
           toggle.setAttribute("aria-expanded", "false");
+          toggle.setAttribute("aria-label", "Ouvrir le menu");
           document.body.style.overflow = "";
         }
       });
