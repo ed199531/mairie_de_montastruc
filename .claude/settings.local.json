@@ -48,7 +48,9 @@
       "Bash(git -c 'user.name=Mairie Montastruc' -c user.email=edwin@localisia.fr commit -q -m 'Conseil municipal complet \\(27 élus avec photos officielles\\) + accès rapides en 3+3 *)",
       "Bash(git fetch *)",
       "Bash(git -c 'user.name=Mairie Montastruc' -c user.email=edwin@localisia.fr commit -q -m 'Fix menu mobile : le clic sur un item parent déroule le sous-menu sans fermer le panneau *)",
-      "Bash(echo \"--- exit code push: $? ---\")"
+      "Bash(echo \"--- exit code push: $? ---\")",
+      "Bash(git -c 'user.name=Mairie Montastruc' -c user.email=edwin@localisia.fr commit -q -m 'Fix menu mobile : retrait du backdrop-filter du header *)",
+      "Bash(echo \"exit=$?\")"
     ]
   }
 }
