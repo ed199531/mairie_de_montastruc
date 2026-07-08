@@ -1,0 +1,139 @@
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <span class="hero-badge">🏛️ Site officiel de la commune</span>
+        <h1>Bienvenue à Montastruc-la-Conseillère</h1>
+        <p class="lead">Village de caractère de la Haute-Garonne, aux portes de Toulouse. Retrouvez ici vos démarches, l'actualité municipale et toutes les informations pratiques de votre commune.</p>
+        <div class="hero-actions">
+          <a class="btn btn-accent" href="/demarches">Effectuer une démarche</a>
+          <a class="btn btn-white" href="/contact">Contacter la mairie</a>
+        </div>
+      </div>
+      <aside class="hero-card" aria-label="Horaires d'ouverture de la mairie">
+        <h2><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> Horaires de la mairie</h2>
+        {{HOURS_TABLE}}
+        <a class="btn btn-white" style="margin-top:1rem;width:100%;justify-content:center" href="/contact">Adresse &amp; plan d'accès</a>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section section-tint" aria-labelledby="acces-rapides">
+    <div class="container">
+      <div class="section-head center">
+        <p class="eyebrow">Accès rapides</p>
+        <h2 id="acces-rapides">Vos démarches en quelques clics</h2>
+        <p>Les services les plus demandés, accessibles directement.</p>
+      </div>
+      <div class="quick-grid">
+        <a class="quick-card accent" href="/demarches#cni-passeport">
+          <span class="quick-ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="8.5" cy="11" r="2" fill="currentColor"/><path d="M13 9h5M13 13h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+          <strong>Carte d'identité &amp; passeport</strong>
+          <span>Pré-demande et rendez-vous</span>
+          <span class="arrow">Y accéder →</span>
+        </a>
+        <a class="quick-card" href="/demarches#etat-civil">
+          <span class="quick-ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M9 12h7M9 16h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+          <strong>État civil</strong>
+          <span>Acte de naissance, mariage, décès</span>
+          <span class="arrow">Y accéder →</span>
+        </a>
+        <a class="quick-card" href="/demarches#urbanisme">
+          <span class="quick-ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M4 20V9l8-5 8 5v11" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><rect x="9" y="13" width="6" height="7" fill="none" stroke="currentColor" stroke-width="2"/></svg></span>
+          <strong>Urbanisme &amp; logement</strong>
+          <span>Permis, déclarations de travaux</span>
+          <span class="arrow">Y accéder →</span>
+        </a>
+        <a class="quick-card" href="/vie-locale#enfance">
+          <span class="quick-ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M5 20a7 7 0 0114 0" fill="none" stroke="currentColor" stroke-width="2"/></svg></span>
+          <strong>Enfance &amp; scolarité</strong>
+          <span>Écoles, portail famille, cantine</span>
+          <span class="arrow">Y accéder →</span>
+        </a>
+        <a class="quick-card" href="/contact">
+          <span class="quick-ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M4 5h16v14H4z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 6l8 6 8-6" fill="none" stroke="currentColor" stroke-width="2"/></svg></span>
+          <strong>Nous écrire</strong>
+          <span>Formulaire &amp; coordonnées</span>
+          <span class="arrow">Y accéder →</span>
+        </a>
+        <a class="quick-card" href="/actualites">
+          <span class="quick-ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24"><rect x="3" y="5" width="14" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M17 9h4v8a2 2 0 01-2 2M7 9h6M7 13h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+          <strong>Actualités</strong>
+          <span>Infos, événements, travaux</span>
+          <span class="arrow">Y accéder →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" aria-labelledby="actus">
+    <div class="container">
+      <div class="section-head-row">
+        <div class="section-head" style="margin-bottom:0">
+          <p class="eyebrow">Actualités</p>
+          <h2 id="actus">La vie de la commune</h2>
+        </div>
+        <a class="btn btn-ghost" href="/actualites">Toutes les actualités</a>
+      </div>
+      <div class="card-grid">
+        {{NEWS_HOME}}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-tint" aria-labelledby="decouvrir-home">
+    <div class="container split">
+      <div>
+        <p class="eyebrow">Découvrir</p>
+        <h2 id="decouvrir-home">Un village à vivre, entre patrimoine et nature</h2>
+        <p class="lead">Située à une vingtaine de kilomètres au nord-est de Toulouse, Montastruc-la-Conseillère allie qualité de vie, dynamisme associatif et cadre préservé du Frontonnais.</p>
+        <div class="facts" style="margin:1.5rem 0">
+          <div class="fact"><b>{{POPULATION}}</b><span>habitants</span></div>
+          <div class="fact"><b>31380</b><span>code postal</span></div>
+          <div class="fact"><b>~20 km</b><span>de Toulouse</span></div>
+        </div>
+        <a class="btn btn-primary" href="/decouvrir">Découvrir Montastruc</a>
+      </div>
+      <div class="media-frame">
+        <img src="/assets/img/village.svg" alt="Illustration du village de Montastruc-la-Conseillère avec son clocher et ses maisons en brique" width="800" height="520" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" aria-labelledby="services-home">
+    <div class="container">
+      <div class="section-head center">
+        <p class="eyebrow">Au service des habitants</p>
+        <h2 id="services-home">Explorer la commune par thème</h2>
+      </div>
+      <div class="feature-grid">
+        <a class="feature" href="/mairie" style="text-decoration:none;color:inherit">
+          <span class="quick-ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M4 10l8-5 8 5M5 10v9h14v-9M9 19v-5h6v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span>
+          <h3>La Mairie</h3>
+          <p>Le maire, les élus, le conseil municipal et les services au public.</p>
+        </a>
+        <a class="feature" href="/vie-locale#associations" style="text-decoration:none;color:inherit">
+          <span class="quick-ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24"><circle cx="8" cy="9" r="3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="16" cy="9" r="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 19a5 5 0 0110 0M14 19a5 5 0 017 0" fill="none" stroke="currentColor" stroke-width="2"/></svg></span>
+          <h3>Culture, sport &amp; associations</h3>
+          <p>Une vie associative riche, des équipements sportifs et culturels.</p>
+        </a>
+        <a class="feature" href="/vie-locale#solidarite" style="text-decoration:none;color:inherit">
+          <span class="quick-ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 20s-7-4.3-7-9a4 4 0 017-2.6A4 4 0 0119 11c0 4.7-7 9-7 9z" fill="none" stroke="currentColor" stroke-width="2"/></svg></span>
+          <h3>Solidarité &amp; santé</h3>
+          <p>Le CCAS, l'action sociale, les permanences et l'accès aux soins.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-tint">
+    <div class="container">
+      <div class="cta-band">
+        <h2>Une question ? La mairie vous répond</h2>
+        <p>Notre équipe est à votre disposition pour vous accompagner dans vos démarches et vous orienter vers le bon service.</p>
+        <div class="hero-actions" style="justify-content:center">
+          <a class="btn btn-white" href="tel:{{PHONE_E164}}">📞 {{PHONE}}</a>
+          <a class="btn btn-primary" href="/contact">Formulaire de contact</a>
+        </div>
+      </div>
+    </div>
+  </section>

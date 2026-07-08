@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Assistants IA / moteurs génératifs bienvenus
+User-agent: GPTBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://mairie-montastruc.fr/sitemap.xml

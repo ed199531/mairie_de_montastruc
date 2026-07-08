@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360" role="img" aria-label="Défibrillateur">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#b4472c"/><stop offset="1" stop-color="#9c3b25"/></linearGradient></defs>
+  <rect width="600" height="360" fill="url(#g)"/>
+  <g opacity=".12" fill="#fff"><circle cx="500" cy="300" r="150"/></g>
+  <path d="M300 258 c-60-46-112-78-112-130 0-33 26-50 53-50 22 0 42 15 59 38 17-23 37-38 59-38 27 0 53 17 53 50 0 52-52 84-112 130z" fill="#f4e2d8"/>
+  <path d="M250 155 h34 l14-28 20 56 14-28 h34" fill="none" stroke="#b4472c" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

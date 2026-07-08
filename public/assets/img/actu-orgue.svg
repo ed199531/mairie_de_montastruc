@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360" role="img" aria-label="Orgue de l'église">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#14618e"/><stop offset="1" stop-color="#0d3b54"/></linearGradient></defs>
+  <rect width="600" height="360" fill="url(#g)"/>
+  <g opacity=".12" fill="#fff"><circle cx="520" cy="60" r="120"/></g>
+  <g fill="#f4e2d8">
+    <rect x="210" y="90" width="30" height="170" rx="6"/>
+    <rect x="255" y="70" width="30" height="190" rx="6"/>
+    <rect x="300" y="55" width="30" height="205" rx="6"/>
+    <rect x="345" y="70" width="30" height="190" rx="6"/>
+    <rect x="390" y="90" width="30" height="170" rx="6"/>
+  </g>
+  <rect x="195" y="258" width="240" height="26" rx="6" fill="#b4472c"/>
+  <path d="M150 300 h300" stroke="#b4472c" stroke-width="6" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,17 @@
+{
+  "name": "Mairie de Montastruc-la-Conseillère",
+  "short_name": "Montastruc",
+  "description": "Site officiel de la Mairie de Montastruc-la-Conseillère (31380, Haute-Garonne, Occitanie) : démarches administratives, actualités, élus, services et vie locale.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5f7f8",
+  "theme_color": "#0d3b54",
+  "lang": "fr-FR",
+  "icons": [
+    {
+      "src": "/assets/img/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

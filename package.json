@@ -1,0 +1,15 @@
+{
+  "name": "mairie-montastruc",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site officiel de la Mairie de Montastruc-la-Conseillère",
+  "scripts": {
+    "build": "node build.js",
+    "dev": "node build.js && node serve.js",
+    "serve": "node serve.js",
+    "watch": "node build.js && node serve.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Mairie de Montastruc-la-Conseillère">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#14618e"/><stop offset="1" stop-color="#0d3b54"/></linearGradient>
+    <pattern id="p" width="54" height="54" patternUnits="userSpaceOnUse" patternTransform="rotate(30)"><path d="M0 27 H54 M27 0 V54" stroke="#fff" stroke-width="1" opacity=".08"/></pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <rect width="1200" height="630" fill="url(#p)"/>
+  <g transform="translate(90,150)">
+    <path d="M0 0 H150 V96 C150 140 112 168 75 182 C38 168 0 140 0 96 Z" fill="#0d3b54" stroke="#b4472c" stroke-width="7"/>
+    <g fill="#f4e2d8"><rect x="56" y="66" width="40" height="58" rx="3"/><rect x="49" y="56" width="10" height="12"/><rect x="70" y="56" width="10" height="12"/><rect x="93" y="56" width="10" height="12"/></g>
+  </g>
+  <text x="300" y="290" fill="#ffffff" font-family="Georgia, serif" font-size="72" font-weight="700">Montastruc-la-Conseillère</text>
+  <text x="302" y="360" fill="#dce8f0" font-family="Arial, sans-serif" font-size="34">Mairie · Haute-Garonne · Occitanie</text>
+  <rect x="302" y="400" width="120" height="8" rx="4" fill="#b4472c"/>
+</svg>

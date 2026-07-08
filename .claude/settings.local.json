@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:mairie-montastruc.fr)",
+      "WebSearch",
+      "Bash(node build.js)",
+      "Bash(node serve.js)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:8768/)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:8768/contact)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:8768/actualites/permanence-impots)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:8768/sitemap.xml)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:8768/pas-de-page)",
+      "Bash(lsof -ti:8768)",
+      "Bash(xargs kill -9)",
+      "Bash(gh auth *)",
+      "Bash(gh repo *)",
+      "Bash(git init *)",
+      "Bash(git add *)",
+      "Bash(git -c 'user.name=Mairie Montastruc' -c user.email=edwin@localisia.fr commit -q -m 'Refonte complète du site de la Mairie de Montastruc-la-Conseillère *)"
+    ]
+  }
+}

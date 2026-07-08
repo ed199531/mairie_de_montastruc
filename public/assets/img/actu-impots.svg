@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360" role="img" aria-label="Permanence des impôts">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#10485f"/><stop offset="1" stop-color="#0d3b54"/></linearGradient></defs>
+  <rect width="600" height="360" fill="url(#g)"/>
+  <g fill="#f4e2d8">
+    <path d="M210 150 l90-56 90 56 v10 H210 z"/>
+    <rect x="222" y="164" width="14" height="76"/>
+    <rect x="256" y="164" width="14" height="76"/>
+    <rect x="290" y="164" width="14" height="76"/>
+    <rect x="324" y="164" width="14" height="76"/>
+    <rect x="358" y="164" width="14" height="76"/>
+    <rect x="200" y="248" width="200" height="16" rx="4"/>
+  </g>
+  <path d="M150 300 h300" stroke="#b4472c" stroke-width="6" stroke-linecap="round"/>
+</svg>
