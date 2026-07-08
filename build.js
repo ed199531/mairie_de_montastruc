@@ -7,6 +7,7 @@
  */
 const fs = require("fs");
 const path = require("path");
+const crypto = require("crypto");
 const { config, nav, pages, news } = require("./src/data/site.js");
 
 const ROOT = __dirname;
@@ -296,6 +297,13 @@ function tokens(html) {
 /* ------------------------------------------------------------ page render */
 const LAYOUT = read(path.join(SRC, "templates", "layout.html"));
 
+// Empreinte de contenu du CSS+JS pour le cache-busting (change seulement si le contenu change)
+const ASSET_V = crypto
+  .createHash("md5")
+  .update(read(path.join(OUT, "assets/css/styles.css")) + read(path.join(OUT, "assets/js/main.js")))
+  .digest("hex")
+  .slice(0, 8);
+
 function render({ title, description, canonical, ogType, ogImage, bodyClass, header: h, breadcrumb: b, content, footer: f, cookie, schema, noindex }) {
   return LAYOUT.replace(/{{TITLE}}/g, esc(title))
     .replace(/{{DESCRIPTION}}/g, esc(description))
@@ -304,6 +312,7 @@ function render({ title, description, canonical, ogType, ogImage, bodyClass, hea
     .replace(/{{OG_TYPE}}/g, ogType || "website")
     .replace(/{{OG_IMAGE}}/g, ogImage || BASE + "/assets/img/mairie-facade.jpg")
     .replace(/{{BODY_CLASS}}/g, bodyClass || "")
+    .replace(/{{ASSET_V}}/g, ASSET_V)
     .replace("{{HEADER}}", h)
     .replace("{{BREADCRUMB}}", b)
     .replace("{{CONTENT}}", content)

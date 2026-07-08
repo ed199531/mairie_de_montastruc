@@ -42,7 +42,8 @@
       "Bash(mv -f \"ext-favicon.png\" \"favicon.png\")",
       "Bash(rm -f public/assets/img/actu-orgue.svg public/assets/img/og-default.svg)",
       "Bash(grep -rnoE '/assets/img/\\(blason|village|pattern|favicon\\\\.svg|og-default|actu-orgue\\)[^\"]*' src build.js public/assets/css)",
-      "Bash(git -c 'user.name=Mairie Montastruc' -c user.email=edwin@localisia.fr commit -q -m 'Fidélité au site existant : vrai logo, vraies photos, vrais liens & contenus *)"
+      "Bash(git -c 'user.name=Mairie Montastruc' -c user.email=edwin@localisia.fr commit -q -m 'Fidélité au site existant : vrai logo, vraies photos, vrais liens & contenus *)",
+      "Bash(git -c 'user.name=Mairie Montastruc' -c user.email=edwin@localisia.fr commit -q -m 'Fix cache CSS/JS \\(empreinte de contenu\\) + mentions légales \\(crédit Localisia\\) *)"
     ]
   }
 }
