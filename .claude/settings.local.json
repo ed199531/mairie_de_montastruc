@@ -43,7 +43,9 @@
       "Bash(rm -f public/assets/img/actu-orgue.svg public/assets/img/og-default.svg)",
       "Bash(grep -rnoE '/assets/img/\\(blason|village|pattern|favicon\\\\.svg|og-default|actu-orgue\\)[^\"]*' src build.js public/assets/css)",
       "Bash(git -c 'user.name=Mairie Montastruc' -c user.email=edwin@localisia.fr commit -q -m 'Fidélité au site existant : vrai logo, vraies photos, vrais liens & contenus *)",
-      "Bash(git -c 'user.name=Mairie Montastruc' -c user.email=edwin@localisia.fr commit -q -m 'Fix cache CSS/JS \\(empreinte de contenu\\) + mentions légales \\(crédit Localisia\\) *)"
+      "Bash(git -c 'user.name=Mairie Montastruc' -c user.email=edwin@localisia.fr commit -q -m 'Fix cache CSS/JS \\(empreinte de contenu\\) + mentions légales \\(crédit Localisia\\) *)",
+      "Bash(sips -g pixelWidth -g pixelHeight adjoint-01.png conseiller-16.png delegue-03.png)",
+      "Bash(git -c 'user.name=Mairie Montastruc' -c user.email=edwin@localisia.fr commit -q -m 'Conseil municipal complet \\(27 élus avec photos officielles\\) + accès rapides en 3+3 *)"
     ]
   }
 }

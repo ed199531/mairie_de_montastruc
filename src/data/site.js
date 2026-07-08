@@ -353,4 +353,43 @@ const news = [
   },
 ];
 
-module.exports = { config, nav, pages, news };
+/**
+ * Conseil municipal — 27 élus (maire + 7 adjoints + 3 conseillers délégués + 16 conseillers).
+ * Cartes officielles reprises du site de la commune (dossier /assets/elus).
+ */
+const elus = {
+  adjoints: [
+    { name: "William Laskier", role: "1er adjoint · Finances, Sécurité", img: "/assets/elus/adjoint-01.png" },
+    { name: "Isabelle Vaccaro", role: "2ᵉ adjointe · CCAS, Séniors, Lien intergénérationnel, Communication", img: "/assets/elus/adjoint-02.png" },
+    { name: "Serge Perez", role: "3ᵉ adjoint · Travaux, Voiries, Réseaux", img: "/assets/elus/adjoint-03.png" },
+    { name: "Véronique Millet", role: "4ᵉ adjointe · Enfance, Écoles, Jeunesse, Cuisine centrale", img: "/assets/elus/adjoint-04.png" },
+    { name: "Hervé Saingier", role: "5ᵉ adjoint · Développement économique et offre de santé, Commerce, Artisans", img: "/assets/elus/adjoint-05.png" },
+    { name: "Nathalie Bachelet", role: "6ᵉ adjointe · Urbanisme, Aménagement, Environnement, Mobilité, Développement durable", img: "/assets/elus/adjoint-06.png" },
+    { name: "Sébastien Billon", role: "Adjoint · Associations, Ressources humaines", img: "/assets/elus/adjoint-07.png" },
+  ],
+  delegues: [
+    { name: "Laurent Prezman", role: "Conseiller municipal délégué · Transition énergétique", img: "/assets/elus/delegue-01.png" },
+    { name: "Agnès du Lac", role: "Conseillère municipale déléguée · Culture", img: "/assets/elus/delegue-02.png" },
+    { name: "Alexandre Colomar", role: "Conseiller municipal délégué · Handicap", img: "/assets/elus/delegue-03.png" },
+  ],
+  conseillers: [
+    { name: "Laurence Pellier", img: "/assets/elus/conseiller-01.png" },
+    { name: "Christophe Chiche", img: "/assets/elus/conseiller-02.png" },
+    { name: "Odile Perrot", img: "/assets/elus/conseiller-03.png" },
+    { name: "Alain Rison", img: "/assets/elus/conseiller-04.png" },
+    { name: "Virginie Meyer", img: "/assets/elus/conseiller-05.png" },
+    { name: "Charaf Abbach", img: "/assets/elus/conseiller-06.png" },
+    { name: "Laurence Vignon", img: "/assets/elus/conseiller-07.png" },
+    { name: "Xavier Lacombe", img: "/assets/elus/conseiller-08.png" },
+    { name: "Céline Gomez", img: "/assets/elus/conseiller-09.png" },
+    { name: "Etienne Besson", img: "/assets/elus/conseiller-10.png" },
+    { name: "Philomène Correia", img: "/assets/elus/conseiller-11.png" },
+    { name: "Sylvain Martini", img: "/assets/elus/conseiller-12.png" },
+    { name: "Laeticia Cadel", img: "/assets/elus/conseiller-13.png" },
+    { name: "Nathalie Bressolles", img: "/assets/elus/conseiller-14.png" },
+    { name: "Dominique Levy-Ricard", img: "/assets/elus/conseiller-15.png" },
+    { name: "Nicole Delpon", img: "/assets/elus/conseiller-16.png" },
+  ],
+};
+
+module.exports = { config, nav, pages, news, elus };

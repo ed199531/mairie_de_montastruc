@@ -8,7 +8,7 @@
 const fs = require("fs");
 const path = require("path");
 const crypto = require("crypto");
-const { config, nav, pages, news } = require("./src/data/site.js");
+const { config, nav, pages, news, elus } = require("./src/data/site.js");
 
 const ROOT = __dirname;
 const SRC = path.join(ROOT, "src");
@@ -276,6 +276,23 @@ function newsCard(a, opts = {}) {
   </article>`;
 }
 
+function eluCard(p) {
+  const label = p.role ? `${p.name} — ${p.role}` : `${p.name}, conseiller(ère) municipal(e)`;
+  return `<figure class="elu-card"><img src="${p.img}" alt="${esc(label)}" width="350" height="200" loading="lazy" decoding="async"><figcaption class="sr-only">${esc(label)}</figcaption></figure>`;
+}
+function elusGalleries() {
+  const group = (title, sub, arr) => `
+    <div class="elus-group">
+      <h3 class="elus-title">${esc(title)}<span>${esc(sub)}</span></h3>
+      <div class="elus-grid">${arr.map(eluCard).join("")}</div>
+    </div>`;
+  return (
+    group("Les adjoints", `${elus.adjoints.length} adjoints au maire`, elus.adjoints) +
+    group("Conseillers municipaux délégués", `${elus.delegues.length} conseillers délégués de la majorité`, elus.delegues) +
+    group("Conseillers municipaux", `${elus.conseillers.length} conseillers de la majorité`, elus.conseillers)
+  );
+}
+
 function tokens(html) {
   const n = config.nap;
   const map = {
@@ -289,6 +306,7 @@ function tokens(html) {
     "{{YEAR}}": String(new Date().getFullYear()),
     "{{NEWS_LIST}}": news.map((a) => newsCard(a)).join("\n"),
     "{{NEWS_HOME}}": news.slice(0, 3).map((a) => newsCard(a)).join("\n"),
+    "{{ELUS}}": elusGalleries(),
   };
   for (const [k, v] of Object.entries(map)) html = html.split(k).join(v);
   return html;
