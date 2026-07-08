@@ -16,7 +16,19 @@
       "Bash(gh repo *)",
       "Bash(git init *)",
       "Bash(git add *)",
-      "Bash(git -c 'user.name=Mairie Montastruc' -c user.email=edwin@localisia.fr commit -q -m 'Refonte complète du site de la Mairie de Montastruc-la-Conseillère *)"
+      "Bash(git -c 'user.name=Mairie Montastruc' -c user.email=edwin@localisia.fr commit -q -m 'Refonte complète du site de la Mairie de Montastruc-la-Conseillère *)",
+      "Bash(git branch *)",
+      "Bash(git remote *)",
+      "Bash(git push *)",
+      "mcp__58efb081-59b0-4a37-948d-c099c92b3ef4__list_teams",
+      "mcp__58efb081-59b0-4a37-948d-c099c92b3ef4__list_projects",
+      "mcp__58efb081-59b0-4a37-948d-c099c92b3ef4__list_deployments",
+      "Bash(curl -sI https://mairie-de-montastruc.vercel.app/)",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" https://mairie-de-montastruc.vercel.app/contact)",
+      "Bash(curl -sI https://mairie-de-montastruc.vercel.app/fr/index.html)",
+      "Bash(curl -s -o /dev/null -w \"sitemap: HTTP %{http_code}\\\\n\" https://mairie-de-montastruc.vercel.app/sitemap.xml)",
+      "Bash(curl -s -o /dev/null -w \"robots: HTTP %{http_code}\\\\n\" https://mairie-de-montastruc.vercel.app/robots.txt)",
+      "Bash(git -c 'user.name=Mairie Montastruc' -c user.email=edwin@localisia.fr commit -q -m 'Fix: redirections 301 anciennes URLs /fr \\(compat cleanUrls\\) + CSP frame-src *)"
     ]
   }
 }
